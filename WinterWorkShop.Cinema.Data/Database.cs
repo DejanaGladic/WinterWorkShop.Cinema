@@ -9,5 +9,11 @@ namespace WinterWorkShop.Cinema.Domain.Common
             new MovieModel { Id = 1, Name = "Spuderman" },
             new MovieModel { Id = 2, Name = "Spuderman 2"}
         };
+
+        public List<ProjectionModel> GetAllProjectionsResponses = new List<ProjectionModel>
+        {
+            new ProjectionModel { Id = 1, DateOfProjection = new DateTime(2022, 10, 12), Minutes=120 },
+            new ProjectionModel { Id = 2, DateOfProjection = new DateTime(2022, 10, 12), Minutes=150 }
+        };
     }
 }
