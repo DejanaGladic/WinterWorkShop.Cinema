@@ -27,7 +27,8 @@ namespace WinterWorkShop.Cinema.API.Controllers
                 result.Add(new GetAllMoviesResponse
                 {
                     Id = movie.Id,
-                    Name = movie.Name
+                    Name = movie.Name,
+                    FilmDirector = movie.FilmDirector
                 });
             }
 
