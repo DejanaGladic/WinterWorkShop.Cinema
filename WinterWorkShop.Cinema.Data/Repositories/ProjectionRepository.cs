@@ -10,11 +10,11 @@ namespace WinterWorkShop.Cinema.Data.Repositories
 {    
     public class ProjectionRepository : IProjectionRepository
     {
-        public Database database = new Database();
+        public Database Database = new Database();
 
         public List<ProjectionModel> GetAllProjections()
         {
-            throw new NotImplementedException();
+            return Database.GetAllProjectionsResponses;
         }
     }
 }
