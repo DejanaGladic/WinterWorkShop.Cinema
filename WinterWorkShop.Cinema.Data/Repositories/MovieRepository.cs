@@ -1,4 +1,5 @@
-﻿using WinterWorkShop.Cinema.Data.Models;
+﻿using System.Runtime.Intrinsics.Arm;
+using WinterWorkShop.Cinema.Data.Models;
 using WinterWorkShop.Cinema.Domain.Common;
 
 namespace WinterWorkShop.Cinema.Data.Repositories
@@ -14,7 +15,7 @@ namespace WinterWorkShop.Cinema.Data.Repositories
 
         public MovieModel GetMovieById(int id)
         {
-            return Database.GetMovieById;
+            return Database.GetAllMoviesResponses.FirstOrDefault(MovieModel => MovieModel.Id == id);
         }
     }
 }
