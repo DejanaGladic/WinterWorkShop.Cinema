@@ -10,8 +10,6 @@ namespace WinterWorkShop.Cinema.Domain.Common
             new MovieModel { Id = 2, Name = "Spuderman 2", FilmDirector = "Jack Jackson 2" }
         };
 
-        public MovieModel GetMovieById = new MovieModel { Id = 1, Name = "Spuderman", FilmDirector = "Jack Jackson" };
-
 
         public List<ProjectionModel> GetAllProjectionsResponses = new List<ProjectionModel>
         {
