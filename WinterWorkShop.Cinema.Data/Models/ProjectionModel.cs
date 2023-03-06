@@ -12,6 +12,6 @@ namespace WinterWorkShop.Cinema.Data.Models
 
         public DateOnly DateOfProjection { get; set; }
 
-        public int minutes { get; set; }
+        public int Minutes { get; set; }
     }
 }
