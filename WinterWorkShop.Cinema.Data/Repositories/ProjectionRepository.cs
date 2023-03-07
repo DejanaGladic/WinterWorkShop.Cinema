@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WinterWorkShop.Cinema.Data.Models;
 using WinterWorkShop.Cinema.Domain.Common;
+using WinterWorkShop.Cinema.Domain.Responses;
 
 namespace WinterWorkShop.Cinema.Data.Repositories
 {    
@@ -19,7 +20,8 @@ namespace WinterWorkShop.Cinema.Data.Repositories
 
         public ProjectionModel GetProjectionById(int id)
         {
-            return Database.GetAllProjectionsResponses.FirstOrDefault(ProjectionModel => ProjectionModel.Id == id);
+            ProjectionModel _projection = Database.GetAllProjectionsResponses.FirstOrDefault(ProjectionModel => ProjectionModel.Id == id);
+            return _projection;
         }
 
         public ProjectionModel GetProjectionByMovieId(int MovieId)

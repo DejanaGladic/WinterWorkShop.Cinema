@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using WinterWorkShop.Cinema.Data.Repositories;
 using WinterWorkShop.Cinema.Domain.Responses;
 
@@ -41,12 +42,13 @@ namespace WinterWorkShop.Cinema.API.Controllers
             var projection = _projectionRepository.GetProjectionById(id);
 
             var result = new GetAllProjectionsResponses
-            {
-                Id = projection.Id,
-                DateOfProjection = projection.DateOfProjection,
-                Minutes = projection.Minutes,
-                MovieId = projection.MovieId
-            };
+                {
+                    Id = projection.Id,
+                    DateOfProjection = projection.DateOfProjection,
+                    Minutes = projection.Minutes,
+                    MovieId = projection.MovieId
+                };
+        
 
             return result;
         }
