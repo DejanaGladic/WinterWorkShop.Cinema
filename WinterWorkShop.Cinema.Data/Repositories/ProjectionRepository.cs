@@ -16,5 +16,10 @@ namespace WinterWorkShop.Cinema.Data.Repositories
         {
             return Database.GetAllProjectionsResponses;
         }
+
+        public ProjectionModel GetProjectionById(int id)
+        {
+            return Database.GetAllProjectionsResponses.FirstOrDefault(ProjectionModel => ProjectionModel.Id == id);
+        }
     }
 }
