@@ -26,7 +26,8 @@ namespace WinterWorkShop.Cinema.API.Controllers
                 {
                     Id = projection.Id,
                     DateOfProjection = projection.DateOfProjection,
-                    Minutes = projection.Minutes
+                    Minutes = projection.Minutes,
+                    MovieId = projection.MovieId
                 });
             }
 
@@ -43,7 +44,25 @@ namespace WinterWorkShop.Cinema.API.Controllers
             {
                 Id = projection.Id,
                 DateOfProjection = projection.DateOfProjection,
-                Minutes = projection.Minutes
+                Minutes = projection.Minutes,
+                MovieId = projection.MovieId
+            };
+
+            return result;
+        }
+
+        [Route("movieById/{movieId:int}")]
+        [HttpGet()]
+        public GetAllProjectionsResponses GetProjectionByMovieId(int movieId)
+        {
+            var projection = _projectionRepository.GetProjectionByMovieId(movieId);
+
+            var result = new GetAllProjectionsResponses
+            {
+                Id = projection.Id,
+                DateOfProjection = projection.DateOfProjection,
+                Minutes = projection.Minutes,
+                MovieId = projection.MovieId
             };
 
             return result;

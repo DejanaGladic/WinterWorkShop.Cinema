@@ -13,8 +13,8 @@ namespace WinterWorkShop.Cinema.Domain.Common
 
         public List<ProjectionModel> GetAllProjectionsResponses = new List<ProjectionModel>
         {
-            new ProjectionModel { Id = 1, DateOfProjection = new DateTime(2022, 10, 12), Minutes=120 },
-            new ProjectionModel { Id = 2, DateOfProjection = new DateTime(2022, 10, 12), Minutes=150 }
+            new ProjectionModel { Id = 1, DateOfProjection = new DateTime(2022, 10, 12), Minutes=120, MovieId=1 },
+            new ProjectionModel { Id = 2, DateOfProjection = new DateTime(2022, 10, 12), Minutes=150, MovieId=2 }
         };
     }
 }
