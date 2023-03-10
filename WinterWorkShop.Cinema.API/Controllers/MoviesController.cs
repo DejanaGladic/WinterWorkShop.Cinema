@@ -5,7 +5,7 @@ using WinterWorkShop.Cinema.Domain.Responses;
 namespace WinterWorkShop.Cinema.API.Controllers
 {
     [ApiController]
-    
+    [Route("movies")]
     public class MoviesController : BaseController
     {
         public readonly IMovieRepository _movieRepository;
@@ -15,7 +15,7 @@ namespace WinterWorkShop.Cinema.API.Controllers
             _movieRepository = movieRepository;
         }
 
-        [Route("movies")]
+        
         [HttpGet()]
         public List<GetAllMoviesResponse> GetMovies()
         {
@@ -36,15 +36,13 @@ namespace WinterWorkShop.Cinema.API.Controllers
             return result;
         }
 
-        [Route("movie/{id:int}")]
+        [Route("{id:int}")]
         [HttpGet()]
         public GetAllMoviesResponse GetMovieById(int id)
         {
             var movie = _movieRepository.GetMovieById(id);
 
-            var result = new GetAllMoviesResponse();
-
-            result = new GetAllMoviesResponse {
+            var result = new GetAllMoviesResponse {
                 Id = movie.Id,
                 Name = movie.Name,
                 FilmDirector = movie.FilmDirector

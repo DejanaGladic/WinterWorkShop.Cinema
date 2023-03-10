@@ -13,5 +13,7 @@ namespace WinterWorkShop.Cinema.Domain.Responses
         public DateTime DateOfProjection { get; set; }
 
         public int Minutes { get; set; }
+
+        public int MovieId { get; set; }
     }
 }
